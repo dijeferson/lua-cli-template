@@ -1,0 +1,15 @@
+require("luassert")
+
+describe("CLI", function()
+  it("should simply work", function()
+    assert.is_true(true)
+    assert.is_false(false)
+    assert.is_nil(nil)
+    assert.equals(1, 1)
+    assert.same({1, 2, 3}, {1, 2, 3})
+    assert.are.same({1, 2, 3}, {1, 2, 3})
+    assert.is.equal(1, 1)
+    assert.error(function() error("This is an error") end)
+  end)
+end)
+
