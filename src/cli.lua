@@ -51,7 +51,7 @@ end
 local function process_tags(tags)
   if tags then
     -- returns a list of tags as a string separated by commas
-  log:debug("Processing tags", tags)
+    log:debug("Processing tags", tags)
     return table.concat(tags, ",")
   end
 end
@@ -64,7 +64,7 @@ local function main()
   if args.verbose then
     log:setLevel(log.DEBUG)
   else
-    log:setLevel(log.OFF)
+    log:setLevel(log.ERROR)
   end
 
   log:debug("Starting worklog generation")
